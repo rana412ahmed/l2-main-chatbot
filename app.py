@@ -77,7 +77,8 @@ if audio:
                         for msg in st.session_state.messages:
                             messages.append({"role": msg["role"], "content": msg["content"]})
                         response = client.chat.completions.create(
-                            model="llama-3.3-70b-versatile",
+                            # model="llama-3.3-70b-versatile",
+                            model="openai/gpt-oss-120b",
                             messages=messages,
                             max_tokens=500,
                             temperature=0.7
